@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nomeLabelTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Despesa"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/nomeTxt"
+        app:layout_constraintTop_toBottomOf="@id/nomeLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Informe o nome da despesa"
+        android:inputType="text"/>
+
+    <!--Valor -->
+
+    <TextView
+        android:id="@+id/valorLabelTxt"
+        app:layout_constraintTop_toBottomOf="@id/nomeTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/valorTxt"
+        app:layout_constraintTop_toBottomOf="@id/valorLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Informe o valor"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:id="@+id/dataLabelTxt"
+        app:layout_constraintTop_toBottomOf="@id/valorTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data entrada."
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/dataTxt"
+        app:layout_constraintTop_toBottomOf="@id/dataLabelTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Informe a data da entrada ."
+        android:inputType="date"/>
+
+    <RadioButton
+        android:id="@+id/entradaRdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Entrada"
+
+        app:layout_constraintTop_toBottomOf="@id/dataTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saidaRdButton"
+        app:layout_constraintBottom_toTopOf="@id/cadastrarButton"
+
+        android:layout_marginTop="32dp"
+
+    />
+
+    <RadioButton
+        android:id="@+id/saidaRdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Entrada"
+
+        app:layout_constraintTop_toTopOf="@id/entradaRdButton"
+        app:layout_constraintStart_toEndOf="@id/entradaRdButton"
+        app:layout_constraintEnd_toEndOf="parent"
+
+    />
+
+    <Button
+        android:id="@+id/cadastrarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Cadastrar"
+        android:textStyle="bold"
+
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/entradaRdButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resumoButton"
+    />
+
+    <Button
+        android:id="@+id/resumoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Resumo"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toTopOf="@id/cadastrarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cadastrarButton"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
